@@ -1,0 +1,1138 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, figure1, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-variant-ligatures: none;
+}
+
+html {
+	height: 100%;
+	-ms-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+}
+
+article, aside, details, figcaption, figure, figure1,
+footer, header, hgroup, menu, nav, section { 
+	display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+	content: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, select {
+	vertical-align: middle;
+}
+
+
+/*		W E B F O N T S
+----------------------------------------------- */
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+
+@font-face {
+    font-family: 'gridnik';
+    src: url('gridnik.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gridnik-medium';
+    src: url('gridnik-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*		B A S I C S
+----------------------------------------------- */
+
+body {
+	color: #111;
+	background: #fff;
+	font-family: 'regular';
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	word-spacing: -0.025em;
+	text-align: left;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	font-style: normal;
+}
+
+em, i {
+	font-style: italic;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+input:focus {
+	outline: none;
+}
+
+a:link, a:visited {
+	color: #111;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #00A0FF;
+}
+
+small {
+	font-size: 80%;
+	letter-spacing: 0.05em;
+	position: relative;
+	top: -2px;
+}
+
+.dropshadow img {
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.25);
+}
+
+
+/*		H E A D E R
+----------------------------------------------- */
+
+header {
+	margin: 0 15px 10px 15px;
+	padding-top: 10px;
+	position: relative;
+	border-bottom: 1px solid #111;
+}
+
+header nav {
+	display: inline-block;
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	column-gap: 10px;
+}
+
+header #about ul {
+	list-style: none;
+	display: flex;
+	column-gap: 10px;
+}
+
+/*
+
+#about li:first-of-type a {
+	color: #00A0FF;
+}
+
+*/
+
+nav li:last-of-type a {
+	color: #00A0FF;
+}
+
+header .active {
+	border-bottom: 1px solid #111;
+}
+
+#about li:first-of-type.active {
+	border-bottom-color: #00A0FF;
+}
+
+header #about {
+	float: right !important;
+}
+
+#pagerandom header #about {
+	margin-top: 3px;
+}
+
+header #searchlink:hover {
+	color: #00A0FF;
+	cursor: pointer;
+}
+
+header form {
+	padding-top: 30px;
+}
+
+header #search {
+	border: 0;
+	padding: 0;
+	width: 100%;
+	font: inherit;
+	opacity: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+	cursor: default;
+	font-size: 125%;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+}
+
+header #search:focus {
+	opacity: 1;
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	transition: all 0.25s;
+	background: transparent;
+}
+
+.visible {
+	opacity: 1 !important;
+}
+
+header .pagesearch {
+	opacity: 1 !important;
+}
+
+::placeholder {
+	color: #00A0FF;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #00A0FF;
+}
+
+::-ms-input-placeholder {
+	color: #00A0FF;
+}
+
+
+/*		M A I N
+----------------------------------------------- */
+
+#intro {
+    font-family: 'regular';
+	margin: 0 15px 40px 15px;
+	font-size: 125%;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+}
+
+#title {
+    font-family: 'regular';
+}
+
+#intro h1 {
+	display: inline;
+}
+
+#intro a:link, #intro a:visited, .entry a:link, .entry a:visited, .text a:link, .text a:visited, .shopdata small a:link, .shopdata small a:visited {
+	border-bottom: 1px dotted #00A0FF;
+	color: #00A0FF;
+	
+}
+
+#main {
+	margin: 10px 15px 0 15px;
+	padding-bottom: 25px;
+}
+
+#main img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*		O V E R V I E W
+----------------------------------------------- */
+
+.overview a {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.overview div {
+	position: relative;
+}
+
+.overview img {
+	width: 100%;
+	opacity: 0;
+}
+
+.overview img:not(.initial) {
+	transition: opacity 1s;
+}
+
+.overview img.initial, .overview img.loaded, .overview img.error {
+	opacity: 1;
+}
+
+.overview img:not([src]) {
+	visibility: hidden;
+}
+
+.overview strong {
+	position: absolute;
+	left: 0;
+	top: 46%;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 200%;
+	font-size: 10vw;
+	line-height: 1;
+	letter-spacing: 0.025em;
+	font-weight: bold;
+}
+
+.overview span {
+	display: inline-block;
+	line-height: 1.1;
+}
+
+#pagerandom #main a {
+	display: block;
+	margin-bottom: 14px;
+}
+
+#pagerandom div {
+	display: block;
+	float: left;
+	position: relative;
+	top: -3px;
+}
+
+#pagerandom span {
+	padding-right: 3px;
+}
+
+#pagerandom img {
+	margin-left: 80px;
+	width: 60%;
+	width: calc(100% - 80px);
+	display: block;
+}
+
+.shoperview a {
+margin-bottom: 50px;
+}
+
+.shoperview span {
+padding-top: 10px;
+}
+
+.shoperview small {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	line-height: 1.35;
+}
+
+.shoperview mark {
+	border: 1px solid #111;
+	padding: 3px 15px;
+	border-radius: 50px;
+}
+
+.shoperview a:hover mark, .shoperview a:active mark {
+	border-color: #00A0FF;
+	color: #fff;
+	background: #00A0FF;
+}
+
+.shoperview ins {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+ins.en-stock {
+	color: #23a812;
+}
+
+ins.prevente {
+	color: #cc9e12;
+}
+
+ins.en-rupture {
+	color: #dc2613;
+}
+
+.shoptry small {
+	display: block;
+	margin-bottom: 5px;
+	line-height: 1.35;
+}
+
+#acheter, #shoplink a:link, #shoplink a:visited, .devis:link, .devis:visited {
+	border: 1px solid #00A0FF;
+	color: #00A0FF;
+	padding: 3px 10px;
+	border-radius: 50px;
+}
+
+#acheter:hover, #shoplink a:hover, #shoplink a:active, .devis:hover, .devis:active {
+	border-color: #00A0FF;
+	color: #fff;
+	background: #00A0FF;
+	cursor: pointer;
+}
+
+#paypal {
+	display: none;
+	max-width: 400px;
+}
+
+#shoplink {
+	float: right;
+	clear: right;
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 14px;
+}
+
+#shoptext {
+	max-width: 650px;
+}
+
+
+/*		I N D E X
+----------------------------------------------- */
+
+#pageindex {
+	margin: 10px 15px 30px 15px;
+}
+
+#pageindex table {
+	width: 100%;
+}
+
+#pageindex th {
+	font-weight: normal;
+	padding-bottom: 20px;
+}
+
+#pageindex th:hover {
+	color: #00A0FF;
+	cursor: pointer;
+}
+
+#pageindex th, #pageindex td {
+	padding-right: 15px;
+}
+
+#pageindex .tt {
+	padding-right: 0;
+}
+
+#pageindex td span {
+	padding-right: 3px;
+}
+
+#pageindex .tn {
+	min-width: 80px;
+}
+
+#pageindex .tta, #pageindex .tl, #pageindex .td {
+	display: none;
+}
+
+#pageindex tr:hover {
+	cursor: pointer;
+	color: #00A0FF;
+}
+
+#pageindex #firstrow:hover {
+	cursor: inherit;
+	color: inherit;
+}
+
+
+/*		C O N T E N T
+----------------------------------------------- */
+
+#uptop {
+	float: right;
+}
+
+#pagetext {
+	background: #fefcfa;
+}
+
+#numbering {
+	float: right;
+	margin: 0 15px 0 15px;
+}
+
+#numbering span {
+	padding-right: 3px;
+}
+
+.entry h3 {
+	margin-bottom: 20px;
+}
+
+.entry figure, .shoptry figure {
+	margin-bottom: 9px;
+}
+
+.entry figure1, .shoptry figure1 {
+	margin-bottom: 9px;
+}
+
+.entry .video {
+	margin-bottom: 20px;
+}
+
+.entry figure a {
+	border-bottom: none !important;
+}
+
+.entry figure1 a {
+	border-bottom: none !important;
+}
+
+.entry .text {
+	margin-bottom: 14px;
+}
+
+.entry p {
+	margin-bottom: 20px;
+}
+
+.entry .credits {
+	margin-top: 40px;
+	font-size: 80%;
+	line-height: 1.4;
+	letter-spacing: 0.05em;
+}
+
+figcaption {
+	font-size: 80%;
+	letter-spacing: 0.03em;
+	line-height: 1.35;
+	padding-bottom: 20px;
+}
+
+
+/*		A B O U T
+----------------------------------------------- */
+
+#pageabout section {
+	margin: 10px 15px 20px 15px;
+}
+
+#pageabout section .text {
+	border-top: 1px solid #111;
+	padding-top: 10px;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+#pageabout section h1 {
+	margin-bottom: 20px;
+}
+
+#pageabout section .text:first-child {
+	border: none;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+
+/*		R E S P O N S I V E
+----------------------------------------------- */
+
+@media screen and (min-width: 650px) {
+
+body {
+	font-size: 19px;
+	line-height: 25px;
+	letter-spacing: 0.01em;
+}
+
+header {
+	margin: 0 25px 10px 25px;
+	padding-top: 15px;
+}
+
+header nav ul, header #about ul {
+	column-gap: 12px;
+}
+
+header form {
+	padding-top: 60px;
+}
+
+#intro {
+	margin: 0 25px 50px 25px;
+	font-size: 125%;
+	line-height: 1.25;
+	letter-spacing: 0.005em;
+}
+
+#main {
+	margin: 10px 25px 0 25px;
+	padding-bottom: 30px;
+}
+
+.overview {
+	text-align: center;
+}
+
+.overview a {
+	margin-bottom: 50px;
+	margin-left: 22px;
+	margin-right: 22px;
+	font-size: 80%;
+	line-height: 1.25;
+	letter-spacing: 0.02em;
+	width: 250px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.overview div {
+	width: 250px;
+	height: 250px;
+	margin-bottom: 5px;
+}
+
+.overview em {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0;
+	height: 250px;
+}
+
+.overview img {
+	display: inline-block;
+	vertical-align: middle;
+	max-height: 250px;
+	width: auto;
+}
+
+.overview strong {
+	top: 45%;
+	width: 100%;
+	font-size: 180%;
+	letter-spacing: 0.025em;
+}
+
+#pagerandom #main a {
+	display: block;
+	margin-bottom: 25px;
+}
+
+#pagerandom img {
+	margin-left: 110px;
+	width: calc(100% - 110px);
+}
+
+#pageindex {
+	margin: 10px 25px 45px 25px;
+}
+
+#pageindex th {
+	padding-bottom: 25px;
+}
+
+#pageindex .tn {
+	min-width: 110px;
+}
+
+#pageindex .tt {
+	width: 50%;
+}
+
+#pageindex .td {
+	min-width: 110px;
+	display: table-cell;
+	padding-right: 0;
+	text-align: right;
+}
+
+#numbering {
+	float: right;
+	margin: 0 25px 0 25px;
+}
+
+.entry h3 {
+	margin-bottom: 25px;
+}
+
+.entry figure, .shoptry figure {
+	margin-bottom: 19px;
+}
+
+.entry figure1, .shoptry figure1 {
+	margin-bottom: 19px;
+}
+
+.entry .video {
+	margin-bottom: 25px;
+}
+
+.entry .text {
+	margin-bottom: 25px;
+}
+
+.entry p {
+	margin-bottom: 25px;
+}
+
+.entry .portrait {
+	width: 60%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.shoptry {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 25px;
+}
+
+#pageabout section {
+	margin: 10px 25px 25px 25px;
+}
+
+#pageabout section h1 {
+	margin-bottom: 0;
+	float: left;
+}
+
+#pageabout section p {
+	margin-left: 110px;
+}
+
+}
+
+
+@media screen and (min-width: 940px) {
+
+#uptop {
+	float: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#pageindex .tt {
+	width: 33%;
+	padding-right: 10px;
+}
+
+#pageindex .ta {
+	display: table-cell;
+	width: 33%;
+	padding-right: 10px;
+}
+
+#pageindex .tl {
+	display: table-cell;
+	width: 33%;
+}
+
+#pageindex table {
+	font-size: 80%;
+	letter-spacing: 0.03em;
+	line-height: 1.3;
+}
+
+#numbering {
+	float: left;
+	margin: 0 0 0 25px;
+}
+
+.entry {
+	width: 60%;
+	margin-left: 20% !important;
+	margin-right: 20% !important;
+}
+
+#pageimage .text {
+	font-size: inherit;
+	line-height: inherit;
+	letter-spacing: inherit;
+	width: 75%;
+	padding-bottom: 5px;
+}
+
+figcaption {
+	max-width: 800px;
+	letter-spacing: 0.025em;
+}
+
+.fancybox-infobar__body {
+	font-size: 80%;
+	letter-spacing: 0.05em;
+}
+
+.entry .credits {
+	width: 60%;
+}
+
+#pageabout section p {
+	margin-left: 20% !important;
+	margin-right: 20% !important;
+}
+
+.shopimg .portrait {
+	max-width: 60%;
+	max-height: calc(100vh - 250px);
+	width: auto;
+	height: auto;
+}
+
+#shoplink {
+	margin-top: 0;
+	margin-right: 24px;
+}
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+body {
+	font-size: 23px;
+	line-height: 30px;
+	letter-spacing: 0.01em;
+	word-spacing: -0.025em;
+}
+
+small {
+	top: -1px;
+}
+
+header {
+	margin: 0 30px 10px 30px;
+	padding-top: 15px;
+}
+
+header nav ul, header #about ul {
+	column-gap: 12px;
+}
+
+header form {
+	padding-top: 75px;
+}
+
+header #search {
+	font-size: 200%;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	word-spacing: -0.03em;
+}
+
+#intro {
+	margin: 0 30px 60px 30px;
+	font-size: 200%;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	word-spacing: -0.03em;
+}
+
+#main {
+	margin: 10px 5px 0 5px;
+	padding-bottom: 30px;
+}
+
+.overview a {
+	margin-bottom: 90px;
+	margin-left: 27px;
+	margin-right: 27px;
+	width: 325px;
+}
+
+.overview div {
+	width: 325px;
+	height: 325px;
+	margin-bottom: 10px;
+}
+
+.overview em {
+	height: 325px;
+}
+
+.overview img {
+	max-height: 325px;
+}
+
+.overview strong {
+	top: 44%;
+	width: 100%;
+	font-size: 200%;
+	letter-spacing: 0.02em;
+}
+
+#pagerandom #main a {
+	display: block;
+	margin-bottom: 30px;
+	margin-left: 25px;
+}
+
+#pagerandom img {
+	margin-left: 200px;
+	width: calc(100% - 225px);
+}
+
+#pageindex {
+	margin: 10px 30px 0 30px;
+}
+
+#pageindex .tn {
+	width: 12%;
+}
+
+#pageindex .ta {
+	width: 30%;
+}
+
+#pageindex .tt {
+	width: 30%;
+}
+
+#pageindex .tl {
+	width: 15%;
+}
+
+#pageindex .td {
+	width: 13%;
+	white-space: nowrap;
+}
+
+#numbering {
+	margin: 0 0 0 30px;
+}
+
+.entry {
+	width: 70%;
+	margin-left: 15% !important;
+	margin-right: 15% !important;
+}
+
+.entry h3 {
+	margin-bottom: 30px;
+}
+
+.entry figure, .shoptry figure {
+	margin-bottom: 24px;
+}
+
+.entry figure1, .shoptry figure1 {
+	margin-bottom: 24px;
+}
+
+.entry figure img, .shoptry figure img {
+	width: 100%;
+}
+
+.entry figure1 img, .shoptry figure1 img {
+	width: 50%;
+}
+
+.entry .video {
+	margin-bottom: 30px;
+}
+
+.entry .text {
+	margin-bottom: 30px;
+}
+
+.entry p {
+	margin-bottom: 30px;
+}
+
+.shoptry {
+	margin-left: 30px !important;
+	margin-right: 30px !important;
+	padding-bottom: 0 !important;
+}
+
+#shoplink {
+	margin-right: 29px;
+}
+
+#pageimage .text {
+	max-width: 800px;
+	letter-spacing: 0.01em;
+}
+
+.credits {
+	max-width: 800px;
+	letter-spacing: 0.02em;
+}
+
+.credits {
+	padding-top: 30px;
+}
+
+#pagetext .entry, #pageabout section p {
+	width: 850px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+#pageabout .text {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+}
+
+
+@media screen and (min-width: 1850px) {
+
+#pageindex table {
+	font-size: 23px;
+	line-height: 30px;
+	letter-spacing: 0.0175em;
+	word-spacing: -0.05em;
+}
+
+}
+
+
+@media (prefers-color-scheme: light) {
+
+body {
+	color: #000;
+	background: #fff;
+}
+
+a:link, a:visited {
+	color: #000;
+}
+
+a:hover, a:active {
+	color: #00A0FF;
+}
+
+header, header .active {
+	border-bottom: 1px solid #000;
+}
+
+header #search {
+	color: #000;
+	background: #fff;
+}
+
+#intro a:link, #intro a:visited, .entry a:link, .entry a:visited, .text a:link, .text a:visited, .shopdata small a:link, .shopdata small a:visited {
+	border-bottom: 1px dotted #000;
+}
+
+#pagetext {
+	background: #fff;
+}
+
+#pageabout section .text {
+	border-top: 1px solid #000;
+}
+
+.fancybox-bg {
+	background-color: #fff !important;
+}
+
+.fancybox-button {
+	color: #000 !important;
+}
+
+.fancybox-button:hover {
+	color: #00A0FF !important;
+}
+
+.rsDefault .rsBullet span {
+background: #000 !important;
+}
+
+.rsDefault .rsBullet span:hover {
+background: #00A0FF !important;
+}
+
+.rsDefault .rsBullet.rsNavSelected span {
+background-color: #00A0FF !important;
+}
+
+.shoperview mark {
+	color: #000;
+	border: 1px solid #000;
+}
+
+.shoperview a:hover mark, .shoperview a:active mark {
+	border-color: #000;
+	color: #00A0FF;
+	background: #000;
+}
+
+.shoperview ins {
+	color: #23a812;
+}
+
+#acheter, #shoplink a:link, #shoplink a:visited, .devis:link, .devis:visited {
+	border: 1px solid #000;
+	color: #000;
+}
+
+#acheter:hover, #shoplink a:hover, #shoplink a:active, .devis:hover, .devis:active {
+	border-color: #000;
+	color: #00A0FF;
+	background: #000;
+}
+
+}
