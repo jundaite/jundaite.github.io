@@ -20,6 +20,10 @@ time, mark, audio, video {
 	font-variant-ligatures: none;
 }
 
+#sold {
+  opacity: 0.4
+}
+
 html {
 	height: 100%;
 	-ms-text-size-adjust: none;
